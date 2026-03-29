@@ -1,8 +1,0 @@
-script.js 
-// Captura o elemento do formulário pelo ID
-const form = document.getElementById('formContato');
-
-// Cria uma escuta para o evento de envio (submit)
-form.addEventListener('submit', function(event) {
-    // Evita que a página recarregue (comportamento padrão)
-    event.preventDefault();
