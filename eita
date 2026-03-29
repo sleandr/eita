@@ -6,28 +6,3 @@ const form = document.getElementById('formContato');
 form.addEventListener('submit', function(event) {
     // Evita que a página recarregue (comportamento padrão)
     event.preventDefault();
-
-    // Captura os valores digitados e remove os espaços em branco no início/fim
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    // Regra 1: Verifica se algum campo está vazio
-    if (nome === '' || email === '' || mensagem === '') {
-        alert('Erro: Todos os campos (nome, e-mail e mensagem) devem ser preenchidos!');
-        return; // Interrompe a execução
-    }
-
-    // Regra 2: Verifica o formato do e-mail usando expressão regular (Regex)
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Erro: Por favor, informe um endereço de e-mail válido (ex: usuario@dominio.com).');
-        return; // Interrompe a execução
-    }
-
-    // Regra 3: Simula o envio com sucesso
-    alert('Mensagem enviada com sucesso!');
-    
-    // Limpa todos os campos do formulário
-    form.reset();
-});eita
